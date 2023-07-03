@@ -1,0 +1,39 @@
+body{
+    background-color: bisque;
+    cursor: not-allowed;
+}
+
+@keyframes minhaAnimacao {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 45pt;
+    color: rgba(223, 59, 135, 0.863);
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(194, 51, 118, 0.863);
+
+    animation-name: minhaAnimacao;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;    
+}
+p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20pt;
+    color: hotpink;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.img-center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.brilho-txt{
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+}
