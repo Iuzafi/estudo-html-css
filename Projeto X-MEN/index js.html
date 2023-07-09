@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-MEN</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/CSS/reset.css">
+    <link rel="stylesheet" href="./src/CSS/estilos.css">
+    <link rel="stylesheet" href="src/CSS/responsivo.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img class="logo" src="./src/imagens/logo.svg" alt="Logo x-men">
+    </header>
+
+    <main class="selecao-de-personagens">
+        <section class="personagens">
+            <h1 class="titulo">Selecione um personagem</h1>
+            <ul class="lista-de-personagens">
+                <li class="personagem" id="ciclope" data-nome="Ciclope" data-descricao="Ele tem o poder de disparar rajadas ópticas
+                por um acidente que aconteceu com ele quando criança, mas não consegue controlá-los"
+                    data-imagem="./src/imagens/card-ciclope.png">
+                    <img src="./src/imagens/card-ciclope.jpg" alt="Pesonagem Ciclope">
+                </li>
+
+                <li class="personagem" id="jean-grey" data-nome="Jean Grey"
+                    data-imagem="./src/imagens/card-jean-grey.png"
+                    data-descricao="Jean Grey, uma mutante dos X-Men, tem habilidades telepáticas e telecinéticas. Porém, sua conexão com a Força Fênix a torna uma figura poderosa e instável.">
+                    <img src="./src/imagens/card-jean-grey.jpg" alt="personagem Jean Grey">
+                </li>
+
+                <li class="personagem" id="lince-negra" data-nome="Lince Negra" data-descricao="Lince Negra, também conhecida como Kitty Pryde, é uma mutante com o poder de se tornar intangível e passar através de objetos sólidos." data-imagem="./src/imagens/card-lince-negra.png">
+                    <img src="./src/imagens/card-lince-negra.jpg" alt="Pesonagem Lince Negra">
+                </li>
+
+                <li class="personagem" id="tempestade" data-nome="Tempestade" data-descricao="Tempestade, a mutante com poderes climáticos, controla ventos, raios e tempestades. Líder habilidosa e defensora dos mutantes, ela mostra sua força e determinação em cada batalha." data-imagem="./src/imagens/card-tempestade.png">
+                    <img src="./src/imagens/card-tempestade.jpg" alt="Pesonagem Tempestade">
+                </li>
+
+                <li class="personagem" id="vampira" data-nome="Vampira" data-imagem="/src/imagens/card-vampira.png" data-descricao="Vampira, a mutante com a habilidade de absorver os poderes e a energia vital de outros seres, luta contra o seu desejo de consumir a vida dos outros enquanto busca redenção e controle sobre suas habilidades.">
+                    <img src="./src/imagens/card-vampira.jpg" alt="Pesonagem Vampira">
+                </li>
+
+                <li class="personagem" id="wolverine" data-nome="Wolverine" data-descricao="Wolverine, o poderoso mutante com incrível poder de regeneração, é um guerreiro indomável com garras de adamantium." data-imagem="./src/imagens/card-wolverine.png">
+                    <img src="./src/imagens/card-wolverine.jpg" alt="Pesonagem Wolverine">
+                </li>
+
+                <li class="personagem" id="noturno" data-nome="Noturno" data-imagem="./src/imagens/card-noturno.png" data-descricao="Noturno, o mutante teleportador com aparência demoníaca, é um membro leal e habilidoso dos X-Men. Ele é capaz se tornar uma sombra eficiente na batalha contra o mal.">
+                    <img src="./src/imagens/card-noturno.jpg" alt="Pesonagem Noturno">
+                </li>
+
+                <li class="personagem" id="magneto" data-nome="Magneto" data-imagem="./src/imagens/card-magneto.png" data-descricao="Com a capacidade de controlar campos magnéticos, ele é um formidável adversário e líder dos mutantes na luta pela coexistência pacífica ou dominação dos Humanos.">
+                    <img src="./src/imagens/card-magneto.jpg" alt="Pesonagem Magneto">
+                </li>
+            </ul>
+        </section>
+        <section class="personagem-selecionado">
+            <img class="personagem-grande" src="./src/imagens/card-ciclope.png" alt="Personagem Selecionado">
+
+            <div class="informacoes-personagem">
+                <h2 class="nome-personagem" id="nome-personagem">
+                    Ciclope
+                </h2>
+                <p class="descricao-personagem" id="descricao-personagem">
+                    Ele tem o poder de disparar rajadas ópticas
+                    por um acidente que aconteceu com ele quando criança, mas não consegue controlá-los
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Obtém uma referência para todos os elementos de personagem
+        const personagens = document.querySelectorAll('.personagem');
+
+        // Adiciona um ouvinte de eventos de clique a cada elemento de personagem
+        personagens.forEach(personagem => {
+            personagem.addEventListener('click', () => {
+                // Remove a classe 'selecionado' de todos os personagens
+                personagens.forEach(p => p.classList.remove('selecionado'));
+
+                // Adiciona a classe 'selecionado' ao personagem clicado
+                personagem.classList.add('selecionado');
+
+                // Atualiza as informações do personagem selecionado
+                const nomePersonagem = document.getElementById('nome-personagem');
+                const descricaoPersonagem = document.getElementById('descricao-personagem');
+
+                nomePersonagem.textContent = personagem.dataset.nome;
+                descricaoPersonagem.textContent = personagem.dataset.descricao;
+
+                // Atualize a imagem do personagem selecionado
+                const personagemGrande = document.querySelector('.personagem-grande');
+                personagemGrande.src = personagem.dataset.imagem;
+                personagemGrande.alt = `Personagem ${personagem.dataset.nome}`;
+            });
+        });
+    </script>
+</body>
+
+</html>
