@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'android';
+    src: url(fontes/idroid.otf) format('opentype');
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
