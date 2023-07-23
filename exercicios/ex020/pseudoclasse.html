@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+        div {
+            display: inline-block; /* Exibe uma div ao lado da outra, em linha */
+            height: 200px; /* Altura do bloco */
+            width: 200px; /* Largura do bloco */
+            border: 1px solid black; /* Borda do bloco */
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        div:hover { /* configuração aplicada ao passar o mouse sobre a div */
+            background-color: lightpink;
+        }
+        
+        div#d1 { /* configuração exclusiva do elemento com ID "d1" */
+            background-color: darkred;
+        }
+
+        #d2 { /* não precisa colocar o nome da tag, basta o ID */
+            background-color: darkolivegreen;
+        }
+
+        #d3, #d4 { /* podemos atribuir propriedades a mais de um elemento */
+            background-color: darkslateblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+    <div id="d4">04</div>
+    <div id="d5">05</div>
+</body>
+</html>
