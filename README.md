@@ -14,7 +14,7 @@ Repositório para organização de arquivos e criação de projetos relacionados
 * Desafio 8 - [Desafio da Navegação](https://iuzafi.github.io/estudo-html-css/desafios/d008%20Desafio%20Navegação/index.html)
 * Desafio 9 - [Desafio dos Videos](https://iuzafi.github.io/estudo-html-css/desafios/d009%20Desafio%20Videos/index.html)
 * Desafio 10 - [](https://iuzafi.github.io/estudo-html-css/desafios/)
-* Desafio 11 - [](https://iuzafi.github.io/estudo-html-css/desafios/)
+* Desafio 11 - [Desafio do Astronauta](https://iuzafi.github.io/estudo-html-css/desafios/d011%20Desafio%20do%20Astronauta/index.html)
 * Desafio 12 - [Projeto Cordel](https://iuzafi.github.io/estudo-html-css/desafios/d012%20Projeto%20Cordel/index.html)
 
 ## Links Úteis
